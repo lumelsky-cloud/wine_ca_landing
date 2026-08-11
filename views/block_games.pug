@@ -55,7 +55,26 @@ section#games.games-block
 
           p.games-card__text Интеллектуальный вызов для компании: вопросы, командные обсуждения, очки и финальная гонка за победой.
 
-    
+      article.games-card.games-card--cocktail
+        .games-card__visual(aria-hidden="true")
+          span.games-card__glass
+          span.games-card__stem
+          span.games-card__base
+          span.games-card__stirrer
+          span.games-card__citrus
+          span.games-card__bubble.games-card__bubble--one
+          span.games-card__bubble.games-card__bubble--two
+          span.games-card__bubble.games-card__bubble--three
+
+        .games-card__body
+          .games-card__meta
+            span mixology lab
+            span +60 минут
+
+          h3.games-card__title Коктейльный мастер-класс
+
+          p.games-card__text Соберите авторские напитки вместе с барменом: техники, вкусовые пары, яркая подача и дружеская дегустация финальных миксов.
+
 
 style.
   .games-block {
@@ -201,11 +220,12 @@ style.
     padding: clamp(24px, 4vw, 44px);
     color: #fffaf4;
     background: #181818;
-    font-size: clamp(3rem, 7vw, 7rem);
+    font-size: clamp(2.75rem, 6.2vw, 6.2rem);
     font-weight: 900;
-    line-height: .8;
+    line-height: .84;
     text-transform: uppercase;
     box-shadow: 0 28px 58px rgba(24, 24, 24, .22);
+    overflow-wrap: anywhere;
   }
 
   .games-block__title span {
@@ -243,7 +263,7 @@ style.
 
   .games-block__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
   }
 
@@ -269,6 +289,10 @@ style.
     margin-top: 46px;
   }
 
+  .games-card--cocktail {
+    margin-top: 92px;
+  }
+
   .games-card__visual {
     position: relative;
     overflow: hidden;
@@ -286,6 +310,10 @@ style.
 
   .games-card--quiz .games-card__visual {
     background-color: #dcff67;
+  }
+
+  .games-card--cocktail .games-card__visual {
+    background-color: #ff743d;
   }
 
   .games-card__ring {
@@ -374,6 +402,100 @@ style.
     transform: rotate(9deg);
   }
 
+  .games-card__glass {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    width: clamp(124px, 14vw, 190px);
+    height: clamp(96px, 11vw, 148px);
+    border: clamp(8px, 1vw, 12px) solid #181818;
+    border-top-width: clamp(14px, 1.6vw, 20px);
+    background:
+      linear-gradient(152deg, transparent 0 45%, rgba(255, 250, 244, .44) 46% 56%, transparent 57%),
+      linear-gradient(180deg, transparent 0 34%, #f7cbdc 35% 100%);
+    clip-path: polygon(0 0, 100% 0, 72% 100%, 28% 100%);
+    transform: translate(-50%, -50%) rotate(-6deg);
+  }
+
+  .games-card__stem {
+    position: absolute;
+    left: 50%;
+    top: calc(42% + clamp(46px, 5.4vw, 72px));
+    width: 12px;
+    height: clamp(48px, 6vw, 82px);
+    background: #181818;
+    transform: translateX(-50%) rotate(-6deg);
+    transform-origin: top center;
+  }
+
+  .games-card__base {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    width: clamp(94px, 10vw, 140px);
+    height: 18px;
+    border-radius: 999px;
+    background: #181818;
+    transform: translateX(-50%) rotate(-6deg);
+  }
+
+  .games-card__stirrer {
+    position: absolute;
+    left: 60%;
+    top: 18%;
+    width: 10px;
+    height: clamp(150px, 16vw, 220px);
+    border-radius: 999px;
+    background: #dcff67;
+    transform: rotate(23deg);
+    transform-origin: top center;
+  }
+
+  .games-card__citrus {
+    position: absolute;
+    right: 13%;
+    top: 24%;
+    width: clamp(58px, 6vw, 86px);
+    aspect-ratio: 1;
+    border: 8px solid #181818;
+    border-radius: 50%;
+    background:
+      linear-gradient(90deg, transparent 47%, #181818 48% 52%, transparent 53%),
+      linear-gradient(0deg, transparent 47%, #181818 48% 52%, transparent 53%),
+      #dcff67;
+    transform: rotate(17deg);
+  }
+
+  .games-card__bubble {
+    position: absolute;
+    border: 3px solid #181818;
+    border-radius: 50%;
+    background: #fffaf4;
+  }
+
+  .games-card__bubble--one {
+    left: 12%;
+    top: 18%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .games-card__bubble--two {
+    left: 18%;
+    bottom: 24%;
+    width: 46px;
+    height: 46px;
+    background: #76c7e8;
+  }
+
+  .games-card__bubble--three {
+    right: 22%;
+    bottom: 18%;
+    width: 28px;
+    height: 28px;
+    background: #f7cbdc;
+  }
+
   .games-card__body {
     position: relative;
     z-index: 1;
@@ -395,6 +517,10 @@ style.
 
   .games-card--quiz .games-card__body::before {
     background: #76c7e8;
+  }
+
+  .games-card--cocktail .games-card__body::before {
+    background: #dcff67;
   }
 
   .games-card__meta {
@@ -419,10 +545,19 @@ style.
   .games-card__title {
     margin: 0 0 12px;
     color: #181818;
-    font-size: clamp(2.35rem, 5vw, 4.7rem);
+    font-size: clamp(1.85rem, 2.75vw, 2.95rem);
     font-weight: 900;
-    line-height: .82;
+    line-height: .88;
     text-transform: uppercase;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .games-card--cocktail .games-card__title {
+    max-width: 92%;
+    padding-left: 4px;
+    font-size: clamp(1.45rem, 2vw, 2.1rem);
+    line-height: .96;
   }
 
   .games-card__price {
@@ -504,6 +639,10 @@ style.
       margin-top: 0;
     }
 
+    .games-card--cocktail {
+      margin-top: 0;
+    }
+
     .games-block__side-label {
       right: 10px;
       font-size: .66rem;
@@ -528,7 +667,7 @@ style.
     }
 
     .games-block__title {
-      font-size: clamp(2.75rem, 15vw, 4.6rem);
+      font-size: clamp(2.35rem, 12vw, 4.1rem);
     }
 
     .games-block__note,

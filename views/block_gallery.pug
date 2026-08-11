@@ -13,38 +13,78 @@ section#gallery.cool-gallery
         br
         span вечера
 
-      p.cool-gallery__lead Здесь позже появятся фотографии с площадок и мероприятий.
+      p.cool-gallery__lead Фото лофтов и студий, где проходят камерные музыкальные вечеринки.
 
     .cool-gallery__grid
       .cool-gallery__tile.cool-gallery__tile--large
+        img.cool-gallery__photo(
+          src="/images/photo_2026-07-27_12-23-17.jpg"
+          alt="Студия на Электрозаводской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 01
         span.cool-gallery__tile-line
 
       .cool-gallery__tile
+        img.cool-gallery__photo(
+          src="/images/photo_2026-08-10_23-27-13.jpg"
+          alt="Студия на Тульской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 02
         span.cool-gallery__tile-line
 
       .cool-gallery__tile.cool-gallery__tile--blue
+        img.cool-gallery__photo(
+          src="/images/photo_2026-08-10_23-51-23.jpg"
+          alt="Лофт на Сколковском шоссе"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 03
         span.cool-gallery__tile-line
 
       .cool-gallery__tile
+        img.cool-gallery__photo(
+          src="/images/0016_alekseyvinograd.png"
+          alt="Лофт на Фрунзенской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 04
         span.cool-gallery__tile-line
 
       .cool-gallery__tile.cool-gallery__tile--wide
+        img.cool-gallery__photo(
+          src="/images/photo_2026-07-27_12-23-10.jpg"
+          alt="Интерьер студии на Электрозаводской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 05
         span.cool-gallery__tile-line
 
       .cool-gallery__tile.cool-gallery__tile--dark
+        img.cool-gallery__photo(
+          src="/images/photo_2026-08-10_23-27-03.jpg"
+          alt="Другой ракурс студии на Тульской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 06
         span.cool-gallery__tile-line
 
       .cool-gallery__tile
+        img.cool-gallery__photo(
+          src="/images/photo_2026-08-10_23-51-21.jpg"
+          alt="Другой ракурс лофта на Сколковском шоссе"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 07
         span.cool-gallery__tile-line
 
       .cool-gallery__tile.cool-gallery__tile--blue
+        img.cool-gallery__photo(
+          src="/images/0020_alekseyvinograd.png"
+          alt="Другой ракурс лофта на Фрунзенской"
+          loading="lazy"
+        )
         span.cool-gallery__tile-number 08
         span.cool-gallery__tile-line
 
@@ -167,9 +207,12 @@ style.
 
   .cool-gallery__tile::before {
     position: absolute;
-    inset: 14px;
+    inset: 0;
+    z-index: 1;
     content: "";
-    border: 1px solid rgba(255, 255, 255, .72);
+    background:
+      linear-gradient(180deg, rgba(20, 34, 43, .14), transparent 42%, rgba(20, 34, 43, .48)),
+      linear-gradient(135deg, rgba(255, 255, 255, .08), transparent 44%);
     pointer-events: none;
   }
 
@@ -183,6 +226,23 @@ style.
     border-radius: 50%;
     background: rgba(95, 181, 216, .24);
     pointer-events: none;
+  }
+
+  .cool-gallery__photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.98) contrast(1.03);
+    transition:
+      filter .28s ease,
+      transform .32s ease;
+  }
+
+  .cool-gallery__tile:hover .cool-gallery__photo {
+    filter: saturate(1.08) contrast(1.08);
+    transform: scale(1.045);
   }
 
   .cool-gallery__tile--large {
@@ -209,11 +269,13 @@ style.
     position: absolute;
     left: 20px;
     top: 18px;
-    color: currentColor;
+    z-index: 2;
+    color: #fffaf4;
     font-size: .74rem;
     font-weight: 900;
     letter-spacing: .1em;
     line-height: 1;
+    text-shadow: 0 2px 10px rgba(20, 34, 43, .42);
   }
 
   .cool-gallery__tile-line {
@@ -221,9 +283,10 @@ style.
     left: 20px;
     right: 20px;
     bottom: 18px;
+    z-index: 2;
     height: 1px;
-    background: currentColor;
-    opacity: .2;
+    background: #fffaf4;
+    opacity: .56;
   }
 
   .cool-gallery__tile-line::after {

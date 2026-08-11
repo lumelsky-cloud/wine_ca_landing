@@ -22,8 +22,7 @@ section#services.addon-services
         span.addon-services__tag visual accent
 
         h3
-          | Фотобудка
-          span из пайеток
+          | Фотобудка          
 
         p Стильное решение и яркий акцент для любой вечеринки.
 
@@ -38,7 +37,7 @@ section#services.addon-services
 
       .addon-services__feature-media
         img(
-          src="/images/sequin-photo-zone.png"
+          src="/images/photo_2026-08-10_23-09-39.jpg"
           alt="Фотозона из пайеток"
           loading="lazy"
         )
@@ -173,10 +172,12 @@ style.
   .addon-services__title {
     margin: 0;
     color: #181818;
-    font-size: clamp(3rem, 7.2vw, 7.1rem);
+    font-size: clamp(2.65rem, 6vw, 6rem);
     font-weight: 900;
-    line-height: .82;
+    line-height: .86;
     text-transform: uppercase;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .addon-services__title span {
@@ -232,10 +233,12 @@ style.
   .addon-services__feature h3 {
     margin: 22px 0;
     color: #181818;
-    font-size: clamp(2.6rem, 6vw, 5.7rem);
+    font-size: clamp(2.1rem, 4.4vw, 4.15rem);
     font-weight: 900;
-    line-height: .82;
+    line-height: .88;
     text-transform: uppercase;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .addon-services__feature h3 span {
@@ -317,7 +320,7 @@ style.
   .addon-services__list {
     display: grid;
     counter-reset: addon-service;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
@@ -381,11 +384,12 @@ style.
     position: relative;
     z-index: 1;
     color: #181818;
-    max-width: 88%;
-    font-size: .98rem;
+    max-width: 92%;
+    font-size: clamp(.98rem, 1.35vw, 1.24rem);
     font-weight: 900;
     line-height: 1.25;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
   }
 
   .addon-services__item strong {
@@ -449,7 +453,7 @@ style.
     }
 
     .addon-services__title {
-      font-size: clamp(2.6rem, 14vw, 4.25rem);
+      font-size: clamp(2.2rem, 10.5vw, 3.7rem);
     }
 
     .addon-services__lead {

@@ -1,7 +1,7 @@
 section#prices.wine-prices
   span.wine-prices__grain
   span.wine-prices__decor PACKAGES
-  span.wine-prices__decor-side PRICE / MUSIC PARTY
+  span.wine-prices__decor-side MUSIC PARTY / PACKAGES
   span.wine-prices__shape.wine-prices__shape--blue
   span.wine-prices__shape.wine-prices__shape--orange
 
@@ -27,15 +27,11 @@ section#prices.wine-prices
     .wine-prices__board
       .wine-prices__board-head
         span Пакеты
-        span от 9 900 ₽
-        span за человека
 
       .wine-prices__cards
         article.wine-prices__card.wine-prices__card--silver
           .wine-prices__label
             span.wine-prices__tier Silver
-            span.wine-prices__price 9 900 ₽
-            span.wine-prices__person за человека
 
           ul.wine-prices__list
             li Ведущий
@@ -53,8 +49,6 @@ section#prices.wine-prices
 
           .wine-prices__label
             span.wine-prices__tier Gold
-            span.wine-prices__price 10 900 ₽
-            span.wine-prices__person за человека
 
           ul.wine-prices__list
             li Ведущий
@@ -72,8 +66,6 @@ section#prices.wine-prices
         article.wine-prices__card.wine-prices__card--platinum
           .wine-prices__label
             span.wine-prices__tier Platinum
-            span.wine-prices__price 11 900 ₽
-            span.wine-prices__person за человека
 
           ul.wine-prices__list
             li Ведущий
@@ -243,10 +235,12 @@ style.
   .wine-prices__title {
     margin: 0;
     color: #181818;
-    font-size: clamp(2.9rem, 6.7vw, 6.4rem);
+    font-size: clamp(2.35rem, 4.7vw, 4.65rem);
     font-weight: 900;
-    line-height: .82;
+    line-height: .92;
     text-transform: uppercase;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .wine-prices__title span {
@@ -317,7 +311,7 @@ style.
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: max-content;
     gap: 10px;
     margin-bottom: 10px;
     color: #181818;
@@ -423,39 +417,14 @@ style.
 
   .wine-prices__tier {
     display: block;
-    max-width: 72%;
+    max-width: 100%;
     color: inherit;
-    font-size: clamp(2.2rem, 4vw, 3.7rem);
+    font-size: clamp(1.75rem, 3vw, 2.95rem);
     font-weight: 900;
-    line-height: .82;
+    line-height: .9;
     text-transform: uppercase;
-  }
-
-  .wine-prices__price {
-    display: block;
-    margin-top: 18px;
-    color: #ed683a;
-    font-size: 1.7rem;
-    font-weight: 900;
-    line-height: 1;
-  }
-
-  .wine-prices__card--gold .wine-prices__price {
-    color: #76c7e8;
-  }
-
-  .wine-prices__person {
-    display: block;
-    margin-top: 6px;
-    color: rgba(24, 24, 24, .62);
-    font-size: .7rem;
-    font-weight: 900;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-
-  .wine-prices__card--gold .wine-prices__person {
-    color: rgba(255, 250, 244, .66);
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .wine-prices__list {
@@ -680,7 +649,7 @@ style.
     }
 
     .wine-prices__title {
-      font-size: clamp(2.6rem, 14vw, 4.1rem);
+      font-size: clamp(2rem, 9.2vw, 3.15rem);
     }
 
     .wine-prices__summary {
