@@ -52,6 +52,26 @@ try {
     reply.callNotFound()
   })
 
+  app.get('/images/*', (req, reply) => {
+    const rel = decodeURIComponent(req.params['*'])
+    const imagesRoot = path.join(__dirname, 'public', 'images')
+    const filePath = path.resolve(imagesRoot, rel)
+
+    if (!filePath.startsWith(`${imagesRoot}${path.sep}`) || !fs.existsSync(filePath)) {
+      reply.callNotFound()
+      return
+    }
+
+    const ext = path.extname(filePath).toLowerCase()
+    const types = {
+      '.jpg': 'image/jpeg',
+      '.jpeg': 'image/jpeg',
+      '.png': 'image/png',
+      '.svg': 'image/svg+xml',
+    }
+    reply.type(types[ext] || 'application/octet-stream').send(fs.readFileSync(filePath))
+  })
+
   await app.listen({
   port,
   host: '0.0.0.0',  

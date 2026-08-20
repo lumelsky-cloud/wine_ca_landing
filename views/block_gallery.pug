@@ -18,8 +18,8 @@ section#gallery.cool-gallery
     .cool-gallery__grid
       .cool-gallery__tile.cool-gallery__tile--large
         img.cool-gallery__photo(
-          src="/images/photo_2026-07-27_12-23-17.jpg"
-          alt="Студия на Электрозаводской"
+          src="/images/@dumidze-1191.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 01
@@ -27,8 +27,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile
         img.cool-gallery__photo(
-          src="/images/photo_2026-08-10_23-27-13.jpg"
-          alt="Студия на Тульской"
+          src="/images/@dumidze-1202.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 02
@@ -36,8 +36,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile.cool-gallery__tile--blue
         img.cool-gallery__photo(
-          src="/images/photo_2026-08-10_23-51-23.jpg"
-          alt="Лофт на Сколковском шоссе"
+          src="/images/@dumidze-1203.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 03
@@ -45,8 +45,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile
         img.cool-gallery__photo(
-          src="/images/0016_alekseyvinograd.png"
-          alt="Лофт на Фрунзенской"
+          src="/images/a.kaspersky_055.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 04
@@ -54,8 +54,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile.cool-gallery__tile--wide
         img.cool-gallery__photo(
-          src="/images/photo_2026-07-27_12-23-10.jpg"
-          alt="Интерьер студии на Электрозаводской"
+          src="/images/a.kaspersky_083.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 05
@@ -63,8 +63,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile.cool-gallery__tile--dark
         img.cool-gallery__photo(
-          src="/images/photo_2026-08-10_23-27-03.jpg"
-          alt="Другой ракурс студии на Тульской"
+          src="/images/a.kaspersky_180.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 06
@@ -72,8 +72,8 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile
         img.cool-gallery__photo(
-          src="/images/photo_2026-08-10_23-51-21.jpg"
-          alt="Другой ракурс лофта на Сколковском шоссе"
+          src="/images/BOYKO_MIG-1101.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 07
@@ -81,23 +81,34 @@ section#gallery.cool-gallery
 
       .cool-gallery__tile.cool-gallery__tile--blue
         img.cool-gallery__photo(
-          src="/images/0020_alekseyvinograd.png"
-          alt="Другой ракурс лофта на Фрунзенской"
+          src="/images/BOYKO_MIG-1161.jpg"
+          alt="Фотография с вечеринки"
           loading="lazy"
         )
         span.cool-gallery__tile-number 08
         span.cool-gallery__tile-line
+
+      - const galleryPhotos = ['IMG_0235.jpg', 'IMG_0375.jpg', 'IMG_7748.JPG', 'Loginova_Marina_%202.jpg', 'Loginova_Marina_%203.jpg', 'P5x1yQ3NK9hgPcheslqN.jpg']
+      each photo, index in galleryPhotos
+        .cool-gallery__tile
+          img.cool-gallery__photo(
+            src=`/images/${photo}`
+            alt="Фотография с вечеринки"
+            loading="lazy"
+          )
+          span.cool-gallery__tile-number= String(index + 9).padStart(2, '0')
+          span.cool-gallery__tile-line
 
 style.
   .cool-gallery {
     position: relative;
     overflow: hidden;
     padding: clamp(64px, 9vw, 112px) 0;
-    color: #14222b;
+    color: #241719;
     background:
-      radial-gradient(ellipse at 12% 18%, rgba(118, 199, 232, .34), transparent 32%),
-      radial-gradient(ellipse at 90% 84%, rgba(204, 224, 233, .56), transparent 34%),
-      linear-gradient(135deg, #eef6f8 0%, #dce8ed 48%, #f8fbfb 100%);
+      radial-gradient(ellipse at 8% 12%, rgba(172, 20, 15, .18), transparent 30%),
+      radial-gradient(ellipse at 94% 88%, rgba(244, 190, 174, .42), transparent 34%),
+      linear-gradient(135deg, #fff8f0 0%, #f4e3da 52%, #fffaf4 100%);
     font-family: var(--kv-main, Manrope, Arial, sans-serif);
     isolation: isolate;
   }
@@ -108,8 +119,8 @@ style.
     z-index: -1;
     opacity: .12;
     background-image:
-      linear-gradient(rgba(20, 34, 43, .13) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(20, 34, 43, .11) 1px, transparent 1px);
+      linear-gradient(rgba(172, 20, 15, .11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(36, 23, 25, .09) 1px, transparent 1px);
     background-size: 42px 42px;
     pointer-events: none;
   }
@@ -119,7 +130,7 @@ style.
     top: 22px;
     left: 3%;
     z-index: 0;
-    color: rgba(20, 34, 43, .055);
+    color: rgba(172, 20, 15, .09);
     font-size: clamp(4.2rem, 13vw, 12rem);
     font-weight: 900;
     line-height: .82;
@@ -148,8 +159,8 @@ style.
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    border: 1px solid rgba(20, 34, 43, .13);
-    background: rgba(255, 255, 255, .38);
+    border: 1px solid rgba(172, 20, 15, .25);
+    background: rgba(255, 250, 244, .62);
     backdrop-filter: blur(12px);
     font-size: .72rem;
     font-weight: 900;
@@ -158,14 +169,14 @@ style.
   }
 
   .cool-gallery__label span {
-    color: #5fb5d8;
+    color: #AC140F;
     font-size: clamp(2.7rem, 5.6vw, 5rem);
     line-height: .82;
   }
 
   .cool-gallery__title {
     margin: 0;
-    color: #14222b;
+    color: #241719;
     font-size: clamp(3rem, 7vw, 7rem);
     font-weight: 900;
     line-height: .82;
@@ -173,14 +184,14 @@ style.
   }
 
   .cool-gallery__title span {
-    color: #5fb5d8;
+    color: #AC140F;
   }
 
   .cool-gallery__lead {
     margin: 0;
     padding-top: 22px;
-    border-top: 1px solid rgba(20, 34, 43, .18);
-    color: rgba(20, 34, 43, .72);
+    border-top: 1px solid rgba(172, 20, 15, .3);
+    color: rgba(36, 23, 25, .74);
     font-size: .9rem;
     font-weight: 800;
     line-height: 1.5;
@@ -191,18 +202,19 @@ style.
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: 158px;
-    gap: 12px;
+    gap: 16px;
   }
 
   .cool-gallery__tile {
     position: relative;
     overflow: hidden;
     min-height: 0;
-    border: 1px solid rgba(20, 34, 43, .12);
+    border: 1px solid rgba(172, 20, 15, .22);
     background:
       linear-gradient(135deg, rgba(255, 255, 255, .7), rgba(255, 255, 255, .26)),
-      rgba(222, 236, 242, .66);
-    box-shadow: 0 22px 48px rgba(20, 34, 43, .08);
+      rgba(255, 239, 231, .72);
+    box-shadow: 0 22px 48px rgba(92, 24, 22, .13);
+    transition: border-color .28s ease, box-shadow .28s ease, transform .28s ease;
   }
 
   .cool-gallery__tile::before {
@@ -211,7 +223,7 @@ style.
     z-index: 1;
     content: "";
     background:
-      linear-gradient(180deg, rgba(20, 34, 43, .14), transparent 42%, rgba(20, 34, 43, .48)),
+      linear-gradient(180deg, rgba(36, 23, 25, .12), transparent 42%, rgba(36, 23, 25, .56)),
       linear-gradient(135deg, rgba(255, 255, 255, .08), transparent 44%);
     pointer-events: none;
   }
@@ -224,7 +236,7 @@ style.
     height: 128px;
     content: "";
     border-radius: 50%;
-    background: rgba(95, 181, 216, .24);
+    background: rgba(172, 20, 15, .28);
     pointer-events: none;
   }
 
@@ -245,6 +257,12 @@ style.
     transform: scale(1.045);
   }
 
+  .cool-gallery__tile:hover {
+    border-color: #AC140F;
+    box-shadow: 0 26px 56px rgba(92, 24, 22, .2);
+    transform: translateY(-4px);
+  }
+
   .cool-gallery__tile--large {
     grid-column: span 2;
     grid-row: span 2;
@@ -257,12 +275,12 @@ style.
   .cool-gallery__tile--blue {
     background:
       linear-gradient(135deg, rgba(255, 255, 255, .58), rgba(255, 255, 255, .18)),
-      rgba(118, 199, 232, .5);
+      rgba(172, 20, 15, .28);
   }
 
   .cool-gallery__tile--dark {
-    background: #14222b;
-    color: #eef6f8;
+    background: #241719;
+    color: #fffaf4;
   }
 
   .cool-gallery__tile-number {
