@@ -8,7 +8,7 @@ section#home.hero-apartment
   span.hero-apartment__label.hero-apartment__label--top LIVE SESSION
   span.hero-apartment__label.hero-apartment__label--side MOSCOW / 2026
   span.hero-apartment__flower.hero-apartment__flower--pink
-  span.hero-apartment__flower.hero-apartment__flower--orange
+  span.hero-apartment__flower.hero-apartment__flower--red
 
   a.hero-apartment__logo(
     href="#home"
@@ -97,7 +97,7 @@ style.
     isolation: isolate;
     color: #181818;
     background:
-      radial-gradient(ellipse at 12% 82%, rgba(237, 104, 58, .34), transparent 28%),
+      radial-gradient(ellipse at 12% 82%, rgba(172, 20, 15, .34), transparent 28%),
       linear-gradient(135deg, #c8c8c4 0%, #a9aaa6 52%, #d4d2cd 100%);
     font-family: var(--kv-main, Manrope, Arial, sans-serif);
   }
@@ -126,7 +126,7 @@ style.
     background:
       linear-gradient(90deg, rgba(255, 250, 244, .72) 0%, rgba(255, 250, 244, .34) 42%, rgba(255, 250, 244, .04) 72%),
       radial-gradient(ellipse at 77% 18%, rgba(247, 203, 220, .52), transparent 32%),
-      radial-gradient(ellipse at 86% 70%, rgba(237, 104, 58, .38), transparent 24%);
+      radial-gradient(ellipse at 86% 70%, rgba(172, 20, 15, .38), transparent 24%);
   }
 
   .hero-apartment__noise {
@@ -188,7 +188,7 @@ style.
     bottom: 92px;
     width: clamp(120px, 18vw, 230px);
     height: clamp(54px, 8vw, 96px);
-    color: #f7cbdc;
+    color: #AC140F;
     transform: rotate(15deg);
   }
 
@@ -200,7 +200,7 @@ style.
     transform: rotate(-62deg);
   }
 
-  .hero-apartment__flower--orange {
+  .hero-apartment__flower--red {
     left: -62px;
     bottom: 112px;
     width: clamp(150px, 18vw, 250px);
@@ -209,11 +209,11 @@ style.
     transform: rotate(-18deg);
   }
 
-  .hero-apartment__flower--orange::before {
+  .hero-apartment__flower--red::before {
     transform: rotate(58deg);
   }
 
-  .hero-apartment__flower--orange::after {
+  .hero-apartment__flower--red::after {
     transform: rotate(-58deg);
   }
 
@@ -554,7 +554,9 @@ style.
     }
 
     .hero-apartment__title {
-      font-size: clamp(3.25rem, 17vw, 5.6rem);
+      max-width: 100%;
+      font-size: clamp(2.55rem, 12.5vw, 4.8rem);
+      letter-spacing: -.035em;
     }
 
     .hero-apartment__description {
@@ -562,7 +564,7 @@ style.
       font-size: .88rem;
     }
 
-    .hero-apartment__flower--orange {
+    .hero-apartment__flower--red {
       left: -84px;
       bottom: 118px;
     }
