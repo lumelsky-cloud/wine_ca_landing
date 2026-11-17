@@ -1,11 +1,18 @@
 {
   "type": "module",
-  "name": "wine_ca_landing",
+  "name": "moments-msc",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with Fastify-CLI.",
+  "description": "Moments event agency website",
   "main": "app.js",
-  "directories": {
-    "test": "test"
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "echo \"No build required\"",
+    "import:assets": "node scripts/import-mom-assets.mjs",
+    "test": "node --test test",
+    "start": "fastify start -l info app.js",
+    "dev": "node index.js"
   },
   "dependencies": {
     "@fastify/autoload": "^6.0.0",
@@ -14,18 +21,7 @@
     "@fastify/view": "^12.0.0",
     "fastify": "^5.0.0",
     "fastify-cli": "^8.0.0",
+    "fastify-plugin": "^5.0.0",
     "pug": "^3.0.4"
-  },
-  "devDependencies": {
-    "c8": "^11.0.0"
-  },
-  "scripts": {
-    "build": "echo \"No build required\"",
-    "test": "node --test test/**/*.test.js",
-    "start": "fastify start -l info app.js",
-    "dev": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

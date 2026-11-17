@@ -1,0 +1,32 @@
+extends layouts/page.pug
+
+block content
+  section.detail-hero
+    img.detail-hero__image(src=hero alt=heading)
+    .detail-hero__shade
+    .detail-hero__content
+      p.eyebrow= eyebrow
+      h1= heading
+      p= intro
+      button.button.button--light(type='button' data-open-modal) Обсудить мероприятие
+  section.detail-intro.section
+    .section__heading
+      p.eyebrow Формат Moments
+      h2 Всё продумано за вас
+    p.detail-intro__copy= description
+  section.detail-features.section
+    each feature, index in features
+      article.detail-feature
+        span= String(index + 1).padStart(2, '0')
+        h3= feature
+  if showGallery
+    section.detail-gallery.section
+      .section__heading
+        p.eyebrow Атмосфера
+        h2 Как это может выглядеть
+      .detail-gallery__grid
+        each image, index in images
+          img(src=image alt=`${heading}: фотография ${index + 1}` loading=index < 2 ? 'eager' : 'lazy')
+  section.section.banner
+    h2 Создадим ваш особенный момент
+    button.button.button--light(type='button' data-open-modal) Оставить заявку

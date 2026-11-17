@@ -1,0 +1,17 @@
+extends layouts/page.pug
+block content
+  section.inner-hero
+    p.eyebrow Форматы Moments
+    h1 Тематические мероприятия
+    p Творчество, общение, яркие вкусы и форматы, которые вовлекают каждого гостя.
+  section.section
+    .event-list
+      each event, index in ['Кулинарная вечеринка','Коктейльная вечеринка','Винное казино','Квиз','Арт-мастер-класс','Мастер-класс по флористике','Музыкальное бинго','Караоке-батл']
+        article.event-row
+          span= String(index + 1).padStart(2, '0')
+          h2= event
+          p Подберём программу, ведущих, площадку, оборудование и сопровождение под вашу задачу и состав гостей.
+  section.section.banner
+    h2 Соберём уникальный формат
+    button.button.button--light(type='button' data-open-modal) Обсудить мероприятие
+  include partials/gallery.pug

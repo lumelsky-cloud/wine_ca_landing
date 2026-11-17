@@ -1,0 +1,55 @@
+extends layouts/page.pug
+
+block content
+  section.hero
+    .hero__copy
+      p.eyebrow Event agency · Moscow
+      h1 События, которые становятся вашими моментами
+      p.hero__text Организуем частные и корпоративные мероприятия — тепло, точно и с вниманием к каждой детали.
+      button.button(type='button' data-open-modal) Обсудить событие
+    figure.hero__image
+      img(src='/images/team.jpg' alt='Команда Moments' fetchpriority='high')
+      figcaption Вероника и Татьяна — основательницы Moments
+  section.about.section#about
+    .section__heading
+      p.eyebrow О нас
+      h2 Мы превращаем идеи в живые, эмоциональные события
+    .about__copy
+      p Много лет мы работаем в сфере организации событий — от камерных частных торжеств до крупных корпоративных проектов.
+      p Наш подход держится на трёх принципах: высокий уровень сервиса, внимание к деталям и тёплый человеческий подход.
+  section.services.section#services
+    .section__heading
+      p.eyebrow Направления работы
+      h2 Как мы помогаем
+    .cards
+      article.card.card--dark
+        span 01
+        h3 Event
+        p Решаем задачи бизнеса через продуманные мероприятия: для команды, партнёров и внутренних коммуникаций.
+      article.card
+        span 02
+        h3 Private
+        p Организуем частные мероприятия под ключ — личные поводы, семейные форматы и важные даты.
+      article.card
+        span 03
+        h3 VIP
+        p Создаём премиальные форматы и пространства, берёмся за сложные и нестандартные запросы.
+      article.card.card--accent
+        span 04
+        h3 Дополнительные сервисы
+        p Подарки, брендирование, декор, фотозоны и оформление пространств.
+  section.process.section
+    .section__heading
+      p.eyebrow От идеи до результата
+      h2 Один процесс — полная ответственность
+    ol.steps
+      li Брифинг и анализ задачи
+      li Концепция и бюджет
+      li Площадка и подрядчики
+      li Дизайн и сценарий
+      li Монтаж и проведение
+      li Пост-продакшн
+  include partials/gallery.pug
+  section.quote.section
+    blockquote «Нас всегда объединяло желание делать мероприятия не просто красивыми, а по-настоящему тёплыми и запоминающимися»
+    p — команда Moments

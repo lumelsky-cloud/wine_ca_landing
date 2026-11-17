@@ -1,0 +1,77 @@
+extends layouts/page.pug
+
+block content
+  section.kids-hero
+    .kids-hero__copy
+      p.kids-kicker Новый формат Moments · 2026
+      h1
+        span Детский
+        span.kids-hero__accent праздник
+      p.kids-hero__lead Не просто программа на два часа. Целый мир, придуманный вокруг вашего ребёнка.
+      .kids-hero__actions
+        button.kids-button(type='button' data-open-modal) Придумать праздник
+        a.kids-text-link(href='#concept') Как мы работаем ↓
+    .kids-hero__visual
+      img(src='/images/child-party-hero.png' alt='Авторская коллажная иллюстрация детского праздника: торт, свечи и конфетти' fetchpriority='high')
+      span.kids-sticker 100% #[br] про него
+      span.kids-orbit(aria-hidden='true')
+
+  section.kids-manifesto#concept
+    p.kids-section-no 01 / Идея
+    h2 Праздник начинается #[em не с декора.] Он начинается с увлечений ребёнка.
+    .kids-manifesto__foot
+      p Мы знакомимся, слушаем и превращаем любимые игры, героев и мечты в авторский сценарий — без шаблонных конкурсов.
+      span Для детей 4–14 лет
+
+  section.kids-modules
+    article.kids-module.kids-module--blue
+      span 01
+      h3 Сюжет
+      p История, в которой именинник становится главным героем.
+      i(aria-hidden='true') ✦
+    article.kids-module.kids-module--cream
+      span 02
+      h3 Пространство
+      p Подберём площадку и соберём декор как сценографию.
+      .kids-module__rings(aria-hidden='true')
+    article.kids-module.kids-module--coral
+      span 03
+      h3 Действие
+      p Артисты, мастерские, музыка и игры в едином ритме.
+      b(aria-hidden='true') →
+    article.kids-module.kids-module--yellow
+      span 04
+      h3 Забота
+      p Тайминг, безопасность, меню и внимание к каждому гостю.
+      strong(aria-hidden='true') ☺
+
+  section.kids-story
+    .kids-story__image
+      img(src='/images/mom/tild3032-3736-4466-b334-373433353862/IMG_8198.jpg' alt='Ребёнок на творческом мастер-классе' loading='lazy')
+      p Настоящие эмоции вместо постановочных кадров
+    .kids-story__copy
+      p.kids-section-no 02 / Сценарий дня
+      h2 Один праздник. #[br] Четыре главы.
+      ol
+        li #[span 01] #[strong Встреча] Мягко знакомим гостей и вводим в историю.
+        li #[span 02] #[strong Приключение] Динамичная авторская программа.
+        li #[span 03] #[strong Творчество] Создаём вещь, которую можно забрать домой.
+        li #[span 04] #[strong Финал] Торт, музыка и личный сюрприз имениннику.
+
+  section.kids-included
+    .kids-included__head
+      p.kids-section-no 03 / Всё включено
+      h2 Вы отдыхаете. #[br] Мы держим весь проект.
+    ul
+      li Концепция и сценарий
+      li Площадка и логистика
+      li Артисты и ведущие
+      li Декор и сервировка
+      li Детское меню
+      li Фото и видео
+    button.kids-button.kids-button--dark(type='button' data-open-modal) Получить концепцию
+
+  section.kids-final
+    p Есть повод?
+    h2 Давайте сделаем #[span вау.]
+    button.kids-button(type='button' data-open-modal) Обсудить праздник

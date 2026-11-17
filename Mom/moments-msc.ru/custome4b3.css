@@ -1,0 +1,13 @@
+.t-feed__post-popup__date-parts-wrapper.t-feed__post-popup__date-parts-wrapper_aftertitle {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .t898__btn {
+        bottom: 20px !important;
+        right: 10px !important;
+    }
+    div#rec1242109331 .t898__btn {
+    right: 90px !important;
+}
+}

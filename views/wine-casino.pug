@@ -1,0 +1,88 @@
+extends layouts/page.pug
+
+block content
+  section.wine-hero
+    .wine-hero__copy
+      p.wine-kicker Дегустация × игра × общение
+      h1
+        span Винное
+        span казино
+      p.wine-hero__lead Вечер, где интуиция становится ставкой, а каждый бокал — новой версией ответа.
+      .wine-hero__actions
+        button.wine-button(type='button' data-open-modal) Забронировать игру
+        a.wine-link(href='#rules') Узнать правила ↘
+    .wine-hero__art
+      img(src='/images/wine-casino-hero.png' alt='Авторская коллажная иллюстрация винного казино' fetchpriority='high')
+      span.wine-chip.wine-chip--one 01
+      span.wine-chip.wine-chip--two W
+
+  section.wine-intro
+    p.wine-section-no 01 / Концепция
+    h2 Не лекция о вине. #[em Игра вкуса, риска и открытий.]
+    .wine-intro__note
+      p Сомелье ведёт гостей через несколько раундов. Вы пробуете вина вслепую, делаете ставки на сорт, страну и выдержку — и собираете фишки за точные догадки.
+      span 12–60 гостей
+
+  section.wine-facts
+    article
+      span 5–7
+      p вин в игровой программе
+    article
+      span 90
+      p минут живой дегустации
+    article
+      span 1
+      p профессиональный сомелье
+    article
+      span ∞
+      p поводов обсудить вкус
+
+  section.wine-rules#rules
+    .wine-rules__head
+      p.wine-section-no 02 / Механика
+      h2 Четыре раунда. #[br] Одна интрига.
+    ol
+      li
+        span 01
+        h3 Первый взгляд
+        p Оцениваем цвет, аромат и характер вина — без подсказок и этикеток.
+      li
+        span 02
+        h3 Ставка
+        p Выбираем версию и ставим фишки на сорт, регион или год.
+      li
+        span 03
+        h3 Раскрытие
+        p Сомелье открывает ответ и коротко объясняет детали вкуса.
+      li
+        span 04
+        h3 Финальный банк
+        p Считаем фишки, определяем победителя и вручаем приз.
+
+  section.wine-composition
+    .wine-composition__card.wine-composition__card--cream
+      p В программе
+      h3 Слепая дегустация
+      span Бокалы · карты · фишки · ведущий
+    .wine-composition__card.wine-composition__card--green
+      p В атмосфере
+      h3 Азарт без пафоса
+      span Легко включиться даже новичкам
+    .wine-composition__card.wine-composition__card--pink
+      p По желанию
+      h3 Винный стол
+      span Сыры · тапасы · сезонные пары
+
+  section.wine-audience
+    p.wine-section-no 03 / Для кого
+    h2 Корпоратив. День рождения. Встреча партнёров. #[span Или просто красивый вечер.]
+    ul
+      li Камерный формат дома или в лофте
+      li Командная игра для корпоративного события
+      li Премиальная программа для VIP-гостей
+      li Лёгкое знакомство с вином без сложных терминов
+
+  section.wine-final
+    p Готовы сделать ставку?
+    h2 Ваш вечер. #[span Ваш вкус.] Ваш выигрыш.
+    button.wine-button.wine-button--light(type='button' data-open-modal) Обсудить формат

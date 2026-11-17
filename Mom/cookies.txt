@@ -1,0 +1,6 @@
+# Netscape HTTP Cookie File
+# Written by HTTrack Website Copier
+#HttpOnly_.moments-msc.ru	TRUE	/	FALSE	1826441796	__ddg1_	5ry1FH8PgYPZT3exo9SW
+.moments-msc.ru	TRUE	/	FALSE	1794907095	__ddg8_	gI32AEpM17SCNZlr
+.moments-msc.ru	TRUE	/	FALSE	1794907095	__ddg10_	1794905895
+.moments-msc.ru	TRUE	/	FALSE	1794907095	__ddg9_	195.170.196.107

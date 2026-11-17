@@ -1,0 +1,26 @@
+extends layouts/page.pug
+block content
+  section.inner-hero.inner-hero--gifts
+    p.eyebrow Moments gifts
+    h1 Подарки, которые говорят за вас
+    p Подбираем, оформляем и доставляем корпоративные и персональные подарки — с заботой о деталях и впечатлениях.
+    button.button(type='button' data-open-modal) Оставить заявку
+  section.section
+    .section__heading
+      p.eyebrow Что мы делаем
+      h2 От идеи до вручения
+    .cards.cards--three
+      article.card
+        h3 Подбор подарков
+        p Идеи под бюджет, стиль компании и повод — от классики до авторских концептов.
+      article.card
+        h3 Упаковка и брендинг
+        p Фирменные коробки, открытки, ленты и персонализированные элементы.
+      article.card
+        h3 Доставка и логистика
+        p Доставим подарки аккуратно, вовремя и в нужную точку.
+  section.section.banner
+    h2 Подарки — это эмоции
+    p Поможем вашим клиентам и коллегам почувствовать внимание и заботу.
+    button.button.button--light(type='button' data-open-modal) Подобрать подарок
+  include partials/gallery.pug

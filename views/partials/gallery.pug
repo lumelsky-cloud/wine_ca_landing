@@ -1,0 +1,9 @@
+if images && images.length
+  section.section.photo-library
+    .section__heading
+      p.eyebrow Архив Moments
+      h2 Фотографии проектов
+    .photo-library__grid
+      each image, index in images
+        figure.photo-library__item
+          img(src=image alt=`Фотография проекта Moments ${index + 1}` loading=index < 4 ? 'eager' : 'lazy')
