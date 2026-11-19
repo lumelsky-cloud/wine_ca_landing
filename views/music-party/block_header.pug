@@ -12,10 +12,9 @@ section#home.hero-apartment
 
   a.hero-apartment__logo(
     href="#home"
-    aria-label="MOMENTS EST.2024"
+    aria-label="Moments"
   )
-    span.hero-apartment__logo-main MOMENTS
-    span.hero-apartment__logo-year EST.2024
+    img.hero-apartment__brand-image(src='/images/brand-logo.png' alt='Moments')
 
   .hero-apartment__contacts(aria-label="Контакты")
     a.hero-apartment__contact.hero-apartment__contact--phone(
@@ -220,13 +219,21 @@ style.
   .hero-apartment__logo {
     position: absolute;
     top: 28px;
-    left: clamp(18px, 4vw, 54px);
+    left: 50%;
     z-index: 3;
     display: inline-block;
     color: #181818;
     font-family: var(--kv-main, Manrope, Arial, sans-serif);
     line-height: .8;
     text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  .hero-apartment__brand-image {
+    display: block;
+    width: clamp(190px, 17vw, 270px);
+    height: auto;
+    object-fit: contain;
   }
 
   .hero-apartment__logo-main {

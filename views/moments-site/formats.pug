@@ -1,0 +1,66 @@
+extends layout.pug
+
+block content
+  main.wrap#main
+    .catalog-intro
+      h1
+        | Форматы 
+        span.serif мероприятий
+      p Выберите программу для команды. Любой формат можно заказать отдельно или включить в корпоратив.
+      nav.catalog-nav(aria-label='Категории форматов')
+        a.text-link(href='#themed') Тематические мероприятия
+        a.text-link(href='#games') Игры и интерактивы
+        a.text-link(href='#workshops') Творческие мастер-классы
+
+    section.catalog-section#themed(aria-labelledby='themed-title')
+      h2#themed-title Тематические мероприятия
+      .format-grid
+        article.format-card
+          .format-copy
+            h3 Music Party by MOMENTS
+            p Гости поют любимые песни вместе с артистом. Слова песен выводим на экран или раздаём в песенниках.
+        article.format-card
+          .format-copy
+            h3 Кулинарная вечеринка
+            p Гости делятся на команды и готовят блюда выбранного меню под руководством шеф-повара.
+        article.format-card
+          .format-copy
+            h3 Коктейльная вечеринка
+            p Бармены показывают, как смешивать коктейли, а гости пробуют приготовить свои. Доступны безалкогольные варианты.
+        article.format-card
+          .format-copy
+            h3 Коктейльное казино
+            p Гости вслепую дегустируют коктейли, делают ставки на вкусы и ингредиенты и набирают баллы за верные ответы.
+        article.format-card
+          .format-copy
+            h3 Винное казино
+            p Гости угадывают вина и делают ставки, а сомелье помогает различать ароматы и рассказывает о регионах.
+
+    section.catalog-section#games(aria-labelledby='games-title')
+      h2#games-title Игры и интерактивы
+      .format-grid
+        each game in games
+          article.format-card
+            img(class=game.dark ? 'format-screenshot format-screenshot-dark' : 'format-screenshot' src=game.image alt='' loading='lazy' decoding='async')
+            .format-copy
+              h3= game.title
+              p= game.description
+
+    section.catalog-section#workshops(aria-labelledby='workshops-title')
+      h2#workshops-title Творческие мастер-классы
+      .format-grid
+        article.format-card
+          .format-copy
+            h3 Арт-вечеринка
+            p Под руководством художника каждый гость пишет свою картину акрилом или акварелью и забирает её с собой.
+        article.format-card
+          .format-copy
+            h3 Мастер-класс по флористике
+            p Флорист показывает, как сочетать оттенки и формы. Гости собирают букет или композицию из свежих цветов и забирают работу домой.
+
+block footer
+  footer.green.catalog-footer
+    .wrap
+      p Расскажите о вашем событии — подберём программу под команду.
+      a.button(href='/#contact') Обсудить формат
+

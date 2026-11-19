@@ -1,0 +1,27 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: clamp(185px, 16vw, 250px);
+  height: auto;
+}
+
+.footer__brand {
+  display: inline-block;
+}
+
+.footer__brand img {
+  display: block;
+  width: min(250px, 100%);
+  height: auto;
+  filter: invert(1);
+}
+
+@media (max-width: 850px) {
+  .brand img {
+    width: clamp(170px, 44vw, 220px);
+  }
+}

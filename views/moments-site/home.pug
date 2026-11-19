@@ -1,0 +1,118 @@
+extends layout.pug
+
+block content
+  main#main
+    section.wrap.hero(aria-labelledby='title')
+      div
+        .eyebrow Event-агентство · Москва
+        h1#title
+          | Корпоративные события и 
+          span.serif услуги
+          |  для бизнеса
+        p Организуем корпоративные события в Москве и берём на себя организационные задачи вашей команды — от запроса до выполнения.
+        a.button(href='#contact') Обсудить задачу
+      figure.hero-photo
+        img(src='/images/moments-site/hero.jpg' alt='Команда агентства Moments' fetchpriority='high')
+
+    section.green
+      .wrap.intro
+        p
+          | Ваша забота о людях. Наша работа.
+          span.intro-detail Один ответственный контакт, согласованная смета и понятный план подготовки.
+
+    section.wrap.section#services(aria-labelledby='services-title')
+      .heading
+        div
+          span.eyebrow Направления
+          h2#services-title Что нужно<br>организовать?
+      .services
+        article.service
+          h3 Корпоративные события
+          p Организуем деловые встречи, конференции и события для команд. Берём на себя подготовку и проведение.
+          .service-format
+            h4 Программы для команды
+            p Игры и мастер-классы можно заказать отдельно или включить в программу корпоратива.
+          .service-format
+            h4 Тематические мероприятия
+            p Music Party by MOMENTS, кулинарный вечер или коктейльная дегустация. Подбираем формат и организуем вечер целиком.
+          a.text-link(href='/formats#themed') Подобрать формат
+        article.service
+          h3 Организационная поддержка бизнеса
+          p Берём на себя разовые и регулярные организационные задачи вашей команды. Согласуем сроки и бюджет и доводим задачу до результата.
+          a.text-link(href='#contact') Обсудить задачу
+        article.service
+          h3 Частные события
+          p Организуем события по личным поводам. Обсудим, как вы хотите провести этот день, и соберём программу под вас.
+          a.text-link(href='#contact') Обсудить событие
+
+    section.green.section#projects(aria-label='Проекты Moments')
+      article.wrap.case
+        .case-count
+          strong 250+
+          span гостей на встрече партнёров AIMOL
+        div
+          .eyebrow Кейс · AIMOL
+          h2
+            | От банкета до 
+            span.serif встречи партнёров
+          p.case-lead После первого проекта, где мы отвечали за банкет, AIMOL вернулся к нам с более широкой задачей.
+          dl
+            div
+              dt Задача
+              dd Организовать встречу партнёров и согласовать работу подрядчиков.
+            div
+              dt Работа MOMENTS
+              dd Площадка, техника, персонал, кейтеринг, мерч, оформление, съёмка и логистика.
+      article.wrap.second-case#workshop
+        div
+          span.eyebrow Интерактивный формат
+          h3 Цветочный мастер-класс
+        div
+          p Под руководством флориста участники собрали собственные композиции из живых цветов. Такой формат можно провести как отдельную встречу или включить в программу события.
+          a.text-link(href='https://moments-msc.ru/' target='_blank' rel='noopener noreferrer') Отзывы на сайте Moments
+
+    section.wrap.section.process#process
+      div
+        .eyebrow Подход
+        h2 Как устроена<br>подготовка
+      div
+        details(open)
+          summary Обсуждаем задачу
+          p На брифе фиксируем цель, дату, состав гостей, бюджет, пожелания к программе и порядок согласования.
+        details
+          summary Согласуем план и смету
+          p Предлагаем формат и состав работ, показываем, из чего складывается стоимость, согласуем сроки и ответственных.
+        details
+          summary Готовим и проводим
+          p Координируем подрядчиков, проверяем готовность площадки и ведём проект по согласованному таймингу.
+
+    section.wrap.section.team#team
+      div
+        .eyebrow Команда
+        h2 Кто отвечает<br>за ваш проект
+        p
+          strong Вероника Нам
+          | , соосновательница Moments, ведёт бриф, бюджет и согласования. Она ваш основной контакт по проекту.
+        p
+          strong Татьяна
+          | , соосновательница Moments, отвечает за подготовку и проведение. Её опыт в протоколе и работе с VIP-гостями помогает заранее продумать встречу и сопровождение гостей.
+      figure
+        img(src='/images/moments-site/team.jpg' alt='Команда агентства Moments' loading='lazy')
+
+block footer
+  footer.green.footer#contact
+    .wrap
+      .contact
+        h2
+          | Обсудим<br>
+          span.serif вашу задачу?
+        div
+          p Расскажите, что планируете, на какую дату и для скольких гостей. Обсудим формат и объём работ.
+          .contact-links
+            a.button(href='https://t.me/moments_eventmsc' target='_blank' rel='noopener noreferrer') Написать в Telegram
+            a.button(href='mailto:moments.moscow@gmail.com') Написать на почту
+      .bottom
+        span.wordmark MOMENTS
+        a(href='tel:+79660258111') +7 966 025-81-11
+        span Москва
+

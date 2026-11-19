@@ -11,21 +11,24 @@ html(lang='ru')
     link(rel='stylesheet' href='/css/child-party.css')
     link(rel='stylesheet' href='/css/wine-casino.css')
     link(rel='stylesheet' href='/css/back-link.css')
+    link(rel='stylesheet' href='/css/brand-logo.css')
     script(src='/js/main.js' defer)
   body
     if backToEvents
       a.event-back-link(href='/events') ← Вернуться к мероприятиям
     header.header
-      a.brand(href='/') MOMENTS
+      a.brand(href='/' aria-label='Moments — на главную')
+        img(src='/images/brand-logo.png' alt='Moments')
       button.menu-toggle(type='button' aria-label='Открыть меню' aria-expanded='false') Меню
       nav.nav(aria-label='Основная навигация')
         a(href='/#about') О нас
-        a(href='/#services') Направления
-        a(href='/events') Мероприятия
+        a(href='/#services') Услуги
+        a(href='/events') Форматы
+        a(href='/#projects') Проекты
         a(href='/gifts') Подарки
         a(href='/partners') Партнёры
         a(href='/members') Членство
-        a.nav__cta(href='#contact') Оставить заявку
+        a.nav__cta(href='#contact') Заказать мероприятие
     main
       block content
     include ../partials/footer.pug

@@ -1,6 +1,6 @@
 .event-back-link {
   position: fixed;
-  top: 18px;
+  top: 112px;
   left: 18px;
   z-index: 1000;
   padding: 10px 15px;
@@ -21,7 +21,7 @@
 
 @media (max-width: 560px) {
   .event-back-link {
-    top: 12px;
+    top: 102px;
     left: 12px;
   }
 }

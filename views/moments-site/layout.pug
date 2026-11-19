@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='theme-color' content='#F4F2E9')
+    meta(name='description' content=description)
+    title= title
+    link(rel='stylesheet' href='/css/moments-site.css')
+    if stylesheet
+      link(rel='stylesheet' href=stylesheet)
+  body
+    a.skip(href='#main') Перейти к содержанию
+    header.header
+      .wrap.top
+        a.wordmark(href='/' aria-label='Moments — на главную')
+          img(src='/images/brand-logo.png' alt='Moments')
+        if isFormats
+          nav.nav(aria-label='Разделы сайта')
+            a(href='/') На главную
+            a(href='/#contact') Контакты
+        else
+          nav.nav(aria-label='Разделы сайта')
+            a(href='#services') Направления
+            a(href='#projects') Проекты
+            a(href='#process') Подход
+            a(href='#team') Команда
+          a.button(href='#contact') Обсудить задачу
+    block content
+    block footer
+
