@@ -11,6 +11,8 @@
 .catalog-footer p{margin-bottom:14px}
 
 .format-card{padding:0;overflow:hidden}
+.format-card__link{display:block;height:100%;color:inherit;text-decoration:none}
+.format-card__link:focus-visible{outline:2px solid currentColor;outline-offset:-4px}
 .format-photo{aspect-ratio:5/2;display:block;width:100%;height:auto;object-fit:cover}
 .format-copy{padding:clamp(18px,3vw,28px)}
 .format-illustration{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;background:#f2eadc;border-bottom:1px solid var(--line)}

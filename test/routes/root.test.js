@@ -33,6 +33,7 @@ test('formats catalog renders local extracted images', async () => {
   assert.match(response.body, /Творческие мастер-классы/)
   assert.match(response.body, /\/images\/moments-site\/100-k-1\.webp/)
   assert.match(response.body, /\/images\/moments-site\/what-where-when\.png/)
+  assert.match(response.body, /href="\/music-party"/)
   assert.doesNotMatch(response.body, /data:image\//)
 })
 
