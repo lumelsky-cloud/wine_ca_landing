@@ -13,7 +13,7 @@ html(lang='ru')
     a.skip(href='#main') Перейти к содержанию
     header.header
       .wrap.top
-        a.wordmark(href='/' aria-label='Moments — на главную')
+        a.wordmark(href='/' aria-label='Moments — на главную' class=!isFormats ? 'wordmark--home' : '')
           img(src='/images/brand-logo.png' alt='Moments')
         if isFormats
           nav.nav(aria-label='Разделы сайта')

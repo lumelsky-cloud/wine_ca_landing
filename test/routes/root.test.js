@@ -13,6 +13,7 @@ test('home page renders', async () => {
   assert.match(response.body, /\/css\/moments-site\.css/)
   assert.match(response.body, /\/images\/moments-site\/hero\.jpg/)
   assert.match(response.body, /\/images\/moments-site\/team\.jpg/)
+  assert.match(response.body, /class="wordmark wordmark--home"/)
   assert.match(response.body, /id="services"/)
   assert.match(response.body, /id="projects"/)
   assert.match(response.body, /id="process"/)
